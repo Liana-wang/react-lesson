@@ -8,6 +8,7 @@ import HocPage from './pages/HocPage';
 import FormPage from './pages/FormPage';
 import FormPage2 from './pages/FormPage2';
 import MyFormPage from './pages/MyFormPage';
+import DialogPage from './pages/DialogPage';
 
 function App() {
     return (
@@ -28,7 +29,10 @@ function App() {
             {/* <FormPage2 /> */}
 
             {/* 自己实现一个create */}
-            <MyFormPage />
+            {/* <MyFormPage /> */}
+
+            {/* 弹窗Dialog */}
+            <DialogPage />
         </div>
     );
 }

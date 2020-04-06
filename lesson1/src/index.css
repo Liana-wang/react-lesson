@@ -21,3 +21,17 @@ code {
   padding: 10px;
   border: 1px solid green;
 }
+
+.dialog {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  line-height: 30px;
+  width: 400px;
+  height: 300px;
+  transform: translate(50%, 50%);
+  border: solid 1px gray;
+  text-align: center;
+}
