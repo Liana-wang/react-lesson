@@ -40,3 +40,24 @@ children > component > render
 component里传入箭头函数，每次更新都会重新渲染，因为component是React.createElelemt，箭头函数是匿名函数，所以每次的type值都不一样，就会重新卸载和挂载。
 
 路由守卫，借助redux
+
+## BrowserRouter Route Link Switch Redirect原理
+### BrowserRouter 
+1. 渲染props.children
+2. 创建history并将location放在state上，监听history时改变state
+3. Context.Provider 传递history location
+4. 卸载组件时，卸载history监听器
+
+### Route
+1. 区分children component render渲染
+2. 传递{location, match, history}
+
+### Link
+1. 渲染a标签
+2. 点击a标签，阻止默认行为，history.push(to)
+
+### Switch
+从children中找到match的那个元素并渲染
+
+### Redirect
+在onMounted时，history.push(to)
